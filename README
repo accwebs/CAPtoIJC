@@ -1,0 +1,51 @@
+******************************************************
+Title       : CAPtoIJC
+Project URL : https://github.com/accwebs/CAPtoIJC
+
+Authors     : Aaron Curley <accwebs@gmail.com>
+
+License     : See file LICENSE
+Requires    : GlobalPlatform http://sourceforge.net/projects/globalplatform/
+******************************************************
+
+--------------------------
+  Introduction & Credits
+--------------------------
+
+CAPtoIJC is a simple command line tool that calls the GlobalPlatform library's
+"CAP to IJC" file conversion function.  This is helpful when you need an IJC file, 
+say, for the Red Hat Certificate System, and your compliation process yields only 
+a CAP file (e.g. Java Card SDK).
+
+This project's CMake scripts and accompanying readme/license files were derived from
+the GlobalPlatform project's file.  Many thanks go to Karsten Ohme, Snit Mo, and the
+other GlobalPlatform library contributors for making such an excellent open source 
+project available.
+
+
+--------------------------
+ Downloading & Compiling
+--------------------------
+
+Due to the simplistic and "beta" nature of the code, the author does not intend to distribute 
+binaries at this time.  Compilation is fairly simple; however, using CMake.  Note that a fairly
+modern compiler is required as certain C++ 11 features are used in the source code.
+
+Required third party dependencies:
+* GlobalPlatform (headers and libraries - be sure to compile against the latest "trunk" version)
+
+
+Tested compilers:
+* Visual Studio 2010
+* Visual Studio 2013
+* GCC 4.8 64-bit
+
+
+--------------------------
+ Program Use & Execution
+--------------------------
+Usage:  
+  CAPtoIJC.exe <CAP file (input)> <IJC file (output)>
+
+Example:
+  CAPtoIJC.exe coolkeyapplet.cap coolkeyapplet.ijc
